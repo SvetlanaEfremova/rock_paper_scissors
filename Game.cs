@@ -15,7 +15,7 @@ namespace task3
         public Game(Rules rules)
         {
             this.rules = rules;
-            Random random = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
+            Random random = new Random();
             int maxValue = rules.GetMoves().Count;
             computerMove = random.Next(0, maxValue);
         }
